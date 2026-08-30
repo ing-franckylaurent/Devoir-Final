@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>🌴| Jacmel Ville Touristique</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="dropdown">
+                <a href="#">À propos de Jacmel</a>
+                <ul class="dropdown-menu">
+                    <li><a href="histoire.html">Histoire</a></li>
+                    <li><a href="situation.html">Situation géographique</a></li>
+                    <li><a href="culture.html">Importance culturelle</a></li>
+                </ul>
+            </li>
+            <li><a href="sites-touristiques.html">Sites touristiques</a></li>
+            <li><a href="galerie.html" class="active">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="themeToggle" class="btn-theme">🌙 Mode Nuit</button>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+        </div>
+    </nav>
+
+    <header class="hero-small">
+        <h1>Éclats de Couleurs</h1>
+        <p>De Bassin Bleu à la plage de Raymond-les-Bains, la nature entoure la ville d'un écrin turquoise. En ville, les mosaïques de FOSAJ ornent les murs, transformant chaque coin de rue en œuvre d'art.</p>
+    </header>
+
+    <main class="content">
+        <div class="gallery">
+            <div class="photo-card">
+                <img src="Images/Raymond les bains.jpg" alt="Raymond les Bains">
+                <div class="photo-title">Détente à Raymond les Bains</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="Images/port de Jacmel .jpg" alt="Port de Jacmel">
+                <div class="photo-title">Vue aérienne du Port</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="Images/Lakou New York.jpg" alt="Lakou New York">
+                <div class="photo-title">Lakou Nwe-York</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="Images/bassin bleu.jpg" alt="Bassin Bleu">
+                <div class="photo-title">L'eau turquoise de Bassin Bleu</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="Images/rue 2.jpg" alt="Rue de Jacmel">
+                <div class="photo-title">Image la rue du commerce</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="Images/place t.jpg" alt="Place Toussaint Louverture">
+                <div class="photo-title">Place Toussaint Louverture</div>
+            </div>
+             <div class="photo-card">
+                <img src="Images/hotel manoir adriana.jpg" alt="Hotel Manoir Adriana">
+                <div class="photo-title">Hotel Manoir Adriana</div>
+            </div>
+            <div class="photo-card">
+                <img src="Images/hotel-cyvadier.jpg" alt="Hotel-cyvadier">
+                <div class="photo-title">Hotel-cyvadier</div>
+            </div>
+            <div class="photo-card">
+                <img src="Images/cap-lamandou-hotel.jpg" alt="Cap-Lamandou-Hotel">
+                <div class="photo-title">Cap-Lamandou-Hotel</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Jacmel</h3>
+                <p>La capitale culturelle et artistique du pays.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Francky Laurent - Tous droits réservés.</p>
+                <p id="datetime"></p>
+            </div>
+        </div>
+        <button id="backToTop" class="back-to-top">↑ Retour en haut</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌴| Jacmel Ville Touristique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="dropdown">
+                <a href="#">À propos de Jacmel</a>
+                <ul class="dropdown-menu">
+                    <li><a href="histoire.html" class="active">Histoire</a></li>
+                    <li><a href="situation.html">Situation géographique</a></li>
+                    <li><a href="culture.html">Importance culturelle</a></li>
+                </ul>
+            </li>
+            <li><a href="sites-touristiques.html">Sites touristiques</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="themeToggle" class="btn-theme">🌙 Mode Nuit</button>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Histoire de Jacmel</h1>
+        <p>Découvrez le riche passé historique de l'une des plus belles villes d'Haïti.</p>
+    </header>
+
+    <section class="container">
+        <div class="image">
+            <img src="Images/hotel de la place.jpg" alt="Histoire de Jacmel">
+        </div>
+
+        <div class="content-page">
+            <h2>Les origines de Jacmel</h2>
+            <p>Fondée en 1698, Jacmel est l'une des plus anciennes villes d'Haïti. Grâce à son port naturel, elle est rapidement devenue un important centre commercial pour l'exportation du café, du cacao et de la canne à sucre.</p>
+
+            <h2>Le développement de la ville</h2>
+            <p>Au XIXe siècle, Jacmel connaît une période de prospérité économique. Son architecture d'inspiration française, ses maisons coloniales et ses bâtiments historiques témoignent encore aujourd'hui de cette époque.</p>
+
+            <h2>Un patrimoine culturel exceptionnel</h2>
+            <p>Jacmel est reconnue comme la capitale culturelle d'Haïti. Elle est célèbre pour son carnaval, ses masques en papier mâché, ses artistes, ses peintres, ses musiciens et son artisanat.</p>
+
+            <h2>Jacmel aujourd'hui</h2>
+            <p>Aujourd'hui, Jacmel accueille des visiteurs venus du monde entier. Son patrimoine historique, ses plages, ses cascades, son centre historique et ses festivals en font l'une des principales destinations touristiques d'Haïti.</p>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Jacmel</h3>
+                <p>La capitale culturelle et artistique d'Haïti.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Francky Laurent - Tous droits réservés.</p>
+                <p id="datetime"></p>
+            </div>
+        </div>
+        <button id="backToTop" class="back-to-top">↑ Retour en haut</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

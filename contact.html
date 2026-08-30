@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>🌴| Jacmel Ville Touristique</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="dropdown">
+                <a href="#">À propos de Jacmel</a>
+                <ul class="dropdown-menu">
+                    <li><a href="histoire.html">Histoire</a></li>
+                    <li><a href="situation.html">Situation géographique</a></li>
+                    <li><a href="culture.html">Importance culturelle</a></li>
+                </ul>
+            </li>
+            <li><a href="sites-touristiques.html">Sites touristiques</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="themeToggle" class="btn-theme">🌙 Mode Nuit</button>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>Contactez-nous</h1>
+        
+        <!-- Formulaire -->
+        <form id="contactForm">
+            <input type="text" id="nom" placeholder="Votre Nom" required>
+            <input type="text" id="prenom" placeholder="Votre Prénom" required>
+            <input type="email" id="email" placeholder="Votre Email" required>
+            <input type="tel" id="telephone" placeholder="Votre numéro" required>
+            <textarea id="message" placeholder="Votre message pour Jacmel..." required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <!-- Message de confirmation (caché au départ) -->
+        <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+            <div class="confirmation-content">
+                <div class="confirmation-icon">🌴</div>
+                <h2>Merci pour votre message !</h2>
+                <p>Nous vous remercions d'avoir pris le temps de nous contacter et de visiter <strong>Visit Jacmel</strong>.</p>
+                <p>Votre message a bien été reçu. Nous vous répondrons dans les plus brefs délais.</p>
+                <p class="confirmation-footer">À bientôt à Jacmel ! 🇭🇹</p>
+                <button id="resetForm" class="btn-reset">✏️ Envoyer un autre message</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Jacmel</h3>
+                <p>La capitale culturelle et artistique du pays.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Francky Laurent - Tous droits réservés.</p>
+                <p id="datetime"></p>
+            </div>
+        </div>
+        <button id="backToTop" class="back-to-top">↑ Retour en haut</button>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Script spécifique pour le formulaire -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const confirmation = document.getElementById('confirmationMessage');
+            const resetBtn = document.getElementById('resetForm');
+
+            // Soumission du formulaire
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Empêche l'envoi réel
+
+                // Cacher le formulaire
+                form.style.display = 'none';
+
+                // Afficher le message de confirmation
+                confirmation.style.display = 'block';
+
+                // Faire défiler vers le haut pour voir le message
+                confirmation.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+
+            // Bouton pour réinitialiser et envoyer un autre message
+            resetBtn.addEventListener('click', function() {
+                // Réinitialiser le formulaire
+                form.reset();
+                
+                // Afficher le formulaire
+                form.style.display = 'flex';
+                
+                // Cacher le message de confirmation
+                confirmation.style.display = 'none';
+
+                // Défiler vers le formulaire
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+            });
+        });
+    </script>
+</body>
+</html>

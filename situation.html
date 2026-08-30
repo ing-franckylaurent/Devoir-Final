@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌴| Jacmel Ville Touristique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="dropdown">
+                <a href="#">À propos de Jacmel</a>
+                <ul class="dropdown-menu">
+                    <li><a href="histoire.html">Histoire</a></li>
+                    <li><a href="situation.html" class="active">Situation géographique</a></li>
+                    <li><a href="culture.html">Importance culturelle</a></li>
+                </ul>
+            </li>
+            <li><a href="sites-touristiques.html">Sites touristiques</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="themeToggle" class="btn-theme">🌙 Mode Nuit</button>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>Situation géographique de Jacmel</h1>
+
+        <div class="situation-container">
+            <img src="Images/haiti-la-ville-de-jacmel.jpg" alt="Carte de Jacmel" class="situation-float-image">
+            
+            <p>La commune de Jacmel est située sur la côte sud de la péninsule méridionale d'Haïti. Elle est le chef-lieu du département du Sud-Est et de l'arrondissement de Jacmel. Elle est limitée :</p>
+            
+            <ul>
+                <li><strong>Au nord</strong> par les communes de La Vallée-de-Jacmel et Marigot ;</li>
+                <li><strong>À l'est</strong> par la commune de Marigot ;</li>
+                <li><strong>À l'ouest</strong> par la commune de Cayes-Jacmel ;</li>
+                <li><strong>Au sud</strong> par la mer des Caraïbes.</li>
+            </ul>
+
+            <p>Jacmel est située à environ 100 km au sud-est de Port-au-Prince. Son emplacement côtier, son port, son patrimoine historique et son riche héritage culturel en font l'une des villes les plus importantes du sud d'Haïti, reconnue notamment pour son carnaval, son artisanat et ses plages.</p>
+            
+            <p>La ville de Jacmel est également connue pour son architecture coloniale, ses maisons en fer forgé et son célèbre carnaval qui attire des milliers de visiteurs chaque année. Son patrimoine culturel unique en fait une destination incontournable pour les amoureux d'art et d'histoire. Le Bassin Bleu, ses plages de sable fin et son ambiance festive font de Jacmel un lieu de villégiature prisé par les Haïtiens et les touristes étrangers.</p>
+            
+            <p>Fondée en 1698, Jacmel est l'une des plus anciennes villes d'Haïti. Son port naturel a fait d'elle un important centre commercial pour l'exportation du café, du cacao et de la canne à sucre. Aujourd'hui, elle continue d'attirer les visiteurs par son charme authentique et sa richesse culturelle.</p>
+        </div>
+
+        <h2>Carte de localisation</h2>
+
+        <iframe
+            src="https://www.google.com/maps?q=Jacmel,Haiti&output=embed"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Jacmel</h3>
+                <p>La capitale culturelle et artistique du pays.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Francky Laurent - Tous droits réservés.</p>
+                <p id="datetime"></p>
+            </div>
+        </div>
+        <button id="backToTop" class="back-to-top">↑ Retour en haut</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
