@@ -199,46 +199,117 @@ nav ul li a.active {
 /* ========================================
    MENU DÉROULANT
    ======================================== */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    min-width: 220px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    box-shadow: 0 5px 15px var(--shadow-dark);
-    border-radius: 0 0 8px 8px;
-    z-index: 1001;
-    transition: background 0.3s;
+
+/* Sou DESKTOP */
+@media (min-width: 769px) {
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        min-width: 220px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        border-radius: 0 0 8px 8px;
+        z-index: 1001;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li {
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-menu li a {
+        display: block;
+        padding: 12px 15px;
+        color: #333;
+        text-decoration: none;
+        font-weight: normal;
+        white-space: nowrap;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .dropdown-menu li a:hover {
+        background: var(--primary);
+        color: #fff;
+    }
+
+    /* Kache flèch la sou desktop */
+    .dropdown > a::after {
+        content: "";
+    }
 }
 
-.dropdown-menu li {
-    display: block;
-    width: 100%;
-}
+/* Sou MOBIL (Android, iPhone, elatriye) */
+@media (max-width: 768px) {
+    .dropdown {
+        position: relative;
+    }
 
-.dropdown-menu li a {
-    display: block;
-    padding: 12px 15px;
-    color: #333;
-    text-decoration: none;
-    font-weight: normal;
-    white-space: nowrap;
-    transition: background 0.3s, color 0.3s;
-}
+    /* Meni an kache pa defo */
+    .dropdown-menu {
+        display: none;
+        position: static;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
 
-.dropdown-menu li a:hover {
-    background: var(--primary);
-    color: #fff;
-}
+    /* Lè "open" klas la, meni an parèt */
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
+    .dropdown-menu li {
+        display: block;
+        width: 100%;
+    }
 
+    .dropdown-menu li a {
+        display: block;
+        padding: 12px 15px 12px 30px;
+        color: white;
+        text-decoration: none;
+        font-weight: normal;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        white-space: normal;
+        font-size: 15px;
+    }
+
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a:active {
+        background: rgba(255,255,255,0.2);
+        color: var(--accent);
+    }
+
+    /* Flèch la vire lè meni an ouvè */
+    .dropdown > a::after {
+        content: " ▼";
+        font-size: 10px;
+        margin-left: 5px;
+        display: inline-block;
+        transition: transform 0.3s;
+    }
+
+    .dropdown.open > a::after {
+        transform: rotate(180deg);
+    }
+}
 /* ========================================
    CONTROLES DE NAVIGATION
    ======================================== */
