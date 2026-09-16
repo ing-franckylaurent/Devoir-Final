@@ -154,3 +154,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+// ========================================
+// TOUCH EVENTS POU MOBIL
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownLinks = document.querySelectorAll('.dropdown > a');
+    
+    dropdownLinks.forEach(function(link) {
+        // Pou touch (mobil)
+        link.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            const dropdown = this.parentElement;
+            
+            // Fèmen tout lòt
+            document.querySelectorAll('.dropdown').forEach(function(other) {
+                if (other !== dropdown) {
+                    other.classList.remove('open');
+                }
+            });
+            
+            // Altène
+            dropdown.classList.toggle('open');
+        }, { passive: false });
+    });
+});
