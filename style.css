@@ -2,13 +2,13 @@
    COULEURS ET VARIABLES
    ======================================== */
 :root {
-    --primary: #b670ac;
-    --primary-dark: #9a5a92;
+    --primary: #2c09f0;
+    --primary-dark: #240fe6;
     --accent: #f0c040;
     --text: #333333;
     --light: #f4f4f4;
     --bg: #ffffff;
-    --nav-bg: #b670ac;
+    --nav-bg: #707ab6;
     --footer-bg: #b670ac;
     --card-bg: #ffffff;
     --shadow: rgba(0,0,0,0.1);
@@ -65,9 +65,9 @@ body.dark-mode {
     --card-bg: #2a2a4a;
     --shadow: rgba(0,0,0,0.4);
     --shadow-dark: rgba(0,0,0,0.6);
-    --border-color: #4a4a6a;
+    --border-color: #0606f8;
     --input-bg: #2a2a4a;
-    --primary: #9a7aac;
+    --primary: #2a04fd;
 }
 
 body.dark-mode {
@@ -80,8 +80,9 @@ body.dark-mode nav {
 }
 
 body.dark-mode .hero,
-body.dark-mode .hero-small {
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), var(--bg);
+/* ✅ Sa a ap kenbe imaj la nan mode nuit */
+body.dark-mode .hero::after {
+    background: rgba(0, 0, 0, 0.7);
 }
 
 body.dark-mode .card {
@@ -346,6 +347,32 @@ nav ul li a.active {
     max-width: 600px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
+.hero-small {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('Images/carnaval\ 3.jpg') center/cover no-repeat;
+    height: 40vh;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-small h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-small p {
+    font-size: 18px;
+    max-width: 600px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
 
 /* ========================================
    ANIMATION DIAPORAMA
